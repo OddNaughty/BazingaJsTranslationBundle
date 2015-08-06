@@ -203,7 +203,11 @@ class Controller
         }
 
         $locales = array_filter($locales, function ($locale) {
+<<<<<<< HEAD
             return 1 === preg_match('/^[a-z]{2,3}([-_]{1}[a-zA-Z]{2})?$/', $locale);
+=======
+            return 1 === preg_match('/^[a-z0-9@_\\.\\-]*$/i', $locale);
+>>>>>>> c087b60 (Translator > Added support for other languages from symfony intl bundle)
         });
 
         $locales = array_unique(array_map(function ($locale) {
